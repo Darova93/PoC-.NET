@@ -1,0 +1,18 @@
+<div>
+    <form>
+        <label>What's your name?</label>
+        <input type="text" ng-model="guest">
+    </form>
+
+    <h2>Questions for {{guest}}</h2>
+    <ol>
+        <form>
+            <li ng-repeat="question in questions">
+                {{question.text}}
+                <div ng-repeat="option in question.options">
+                    <input type="{{question.input}}">{{option.text}}</input>
+                </div>
+            </li>
+        </form>
+    </ol>
+</div>

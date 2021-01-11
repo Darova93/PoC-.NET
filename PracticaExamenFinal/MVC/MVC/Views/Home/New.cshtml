@@ -1,0 +1,21 @@
+﻿@model MVC.ViewModels.SurveyQuestions
+@using MVC.Models
+@{
+	ViewBag.Title = "New";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New survey</h2>
+
+@using (Html.BeginForm("Save", "Home"))
+{
+
+	<div>@Html.LabelFor(x => x.Title):</div>
+	<div>@Html.TextBoxFor(x => x.Title)</div>
+
+	<div>@Html.LabelFor(x => x.Description):</div>
+	<div>@Html.TextBoxFor(x => x.Description)</div>
+
+	<button type="submit" class="btn btn-danger">Save</button>
+}
+

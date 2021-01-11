@@ -1,0 +1,140 @@
+{
+  "survey": [
+    {
+      "id": 1,
+      "Title": "first survey",
+      "Description": "my first survey",
+      "IsActive": true,
+      "Status": "Draft"
+    },
+    {
+      "id": 2,
+      "Title": "second survey",
+      "Description": "not my first survey",
+      "IsActive": true,
+      "Status": "Draft"
+    },
+    {
+      "id": 3,
+      "Title": "third survey",
+      "Description": "my normal survey",
+      "IsActive": true,
+      "Status": "Done"
+    },
+    {
+      "id": 4,
+      "Title": "fourth survey",
+      "Description": "my bad survey",
+      "IsActive": true,
+      "Status": "Cancel"
+    },
+    {
+      "id": 5,
+      "Title": "fifth survey",
+      "Description": "my cool survey",
+      "IsActive": true,
+      "Status": "Ready"
+    },
+    {
+      "id": 6,
+      "Title": "rgreghrt",
+      "Description": "kuikyturt",
+      "IsActive": true,
+      "Status": "Done"
+    },
+    {
+      "id": 7,
+      "Title": "Meme",
+      "Description": "Meme survey",
+      "IsActive": true,
+      "Status":"Ready"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "How do you grade me",
+      "questiontypeId": 3,
+      "options": [
+        {
+          "id": 1,
+          "text": "good"
+        },
+        {
+          "id": 2,
+          "text": "bad"
+        },
+        {
+          "id": 3,
+          "text": "medium"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "How do you grade yourself",
+      "questiontypeId": 3,
+      "options": [
+        {
+          "id": 4,
+          "text": "good"
+        },
+        {
+          "id": 5,
+          "text": "bad"
+        },
+        {
+          "id": 6,
+          "text": "medium"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "How do you grade yourself",
+      "questiontypeId": 1,
+      "options": []
+    },
+    {
+      "id": 4,
+      "text": "Whats your favorite food?",
+      "questiontypeId": 1,
+      "options": []
+    },
+    {
+      "id": 5,
+      "text": "Favorite music",
+      "questiontypeId": 2,
+      "options": [
+        {
+          "id": 7,
+          "text": "rock"
+        },
+        {
+          "id": 8,
+          "text": "pop"
+        },
+        {
+          "id": 9,
+          "text": "electro"
+        },
+        {
+          "id": 10,
+          "text": "banda"
+        },
+        {
+          "id": 11,
+          "text": "reggaeton"
+        }
+      ]
+    }
+  ],
+  "answers": {
+    "id": 1,
+    "surveyid":5,
+    "questionsid":3,
+    "optionid":null,
+    "opentext":"very good",
+    "guest":"David"
+  }
+}

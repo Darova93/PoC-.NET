@@ -1,0 +1,58 @@
+﻿@model MVC.Models.Survey
+@using MVC.Models
+@{
+	ViewBag.Title = "Edit";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit survey @Model.Id</h2>
+
+@if (@Model.Title == null)
+{
+	<h2 class="text-center">Survey not found, Sorry!</h2>
+}
+else
+{
+	using (Html.BeginForm("Change", "Home"))
+	{
+		<form class="container">
+			<table class="table">
+				@if (Model.Status == Status.Draft)
+				{
+					<tr class="form-group">
+						<td>@Html.LabelFor(x => x.Title):</td>
+						<td>@Html.TextBoxFor(x => x.Title)</td>
+					</tr>
+					<tr class="form-group">
+						<td>@Html.LabelFor(x => x.Description):</td>
+						<td>@Html.TextBoxFor(x => x.Description)</td>
+					</tr>
+				}
+				else
+				{
+					<tr class="form-group">
+						<td>@Html.LabelFor(x => x.Title):</td>
+						<td>@Model.Title</td>
+					</tr>
+					<tr class="form-group">
+						<td>@Html.LabelFor(x => x.Description):</td>
+						<td>@Model.Description</td>
+					</tr>
+				}
+
+				<tr class="form-group">
+					<td>@Html.LabelFor(x => x.IsActive):</td>
+					<td>@Html.CheckBoxFor(x => x.IsActive)</td>
+				</tr>
+
+				<tr class="form-group">
+					<td>@Html.LabelFor(x => x.Status):</td>
+					<td>@Html.EnumDropDownListFor(x => x.Status)</td>
+				</tr>
+
+			</table>
+		</form>
+		<button type="submit" class="btn btn-danger">Save</button>
+	}
+
+}

@@ -1,0 +1,37 @@
+﻿@model MVC.Models.Survey
+@{
+	ViewBag.Title = "Survey Details";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>@ViewBag.Title</h2>
+
+@if (@Model.Title == null)
+{
+	<h2 class="text-center">Survey not found, Sorry!</h2>
+}
+else
+{
+	<section>
+		<table class="table">
+			<tr>
+				<td>@Html.LabelFor(x => x.Title):</td>
+				<td>@Model.Title</td>
+			</tr>
+			<tr>
+				<td>@Html.LabelFor(x => x.Description):</td>
+				<td>@Model.Description</td>
+			</tr>
+			<tr>
+				<td>@Html.LabelFor(x => x.IsActive):</td>
+				<td>@Model.IsActive</td>
+			</tr>
+			<tr>
+				<td>@Html.LabelFor(x => x.Status):</td>
+				<td>@Model.Status</td>
+			</tr>
+		</table>
+	</section>
+}
+
+
+

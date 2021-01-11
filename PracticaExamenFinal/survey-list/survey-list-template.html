@@ -1,0 +1,18 @@
+<div>
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="survey in surveys">
+                <td>{{survey.id}}</a></td>
+                <td><a href="#!/survey/{{survey.id}}">{{survey.Title}}</a></td>
+                <td>{{survey.Description}}</td>
+                <td>{{survey.Status}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
